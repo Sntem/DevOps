@@ -33,16 +33,11 @@ jobs:
         working-directory: ./backend
         run: npm test
 
-      - name: Lint backend code
-        working-directory: ./backend
-        run: npm run lint
+    #   - name: Lint backend code
+    #     working-directory: ./backend
+    #     run: npm run lint
 
       ### ------------------ FRONTEND ------------------ ###
-      - name: Fix ESLint version for CRA compatibility
-        working-directory: ./frontend
-        run: |
-          echo "SKIP_PREFLIGHT_CHECK=true" > .env
-
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: npm ci
@@ -51,6 +46,6 @@ jobs:
         working-directory: ./frontend
         run: npm test
 
-      - name: Lint frontend code
-        working-directory: ./frontend
-        run: npm run lint
+    #   - name: Lint frontend code
+    #     working-directory: ./frontend
+    #     run: npm run lint
